@@ -4,47 +4,27 @@ class complex{
    int x;
    int y;
    public:
-   complex(int x, int y){
-    this-> x=x;
-    this-> y=y;
-   }
-   complex(complex &X){
-    x=X.x;
-    y=X.y;
-   }
-   void operator = (complex &m){
-    x=m.x;
-    y=m.y;
-   }
-   ~complex(){
-    cout<<"he";
-   }
-   complex(){};
-   friend complex sum(complex a, complex b);
-   void display(){
-    // cout<<"the sum of two complex number is: "<<x<<"+i"<<y;
+complex(int a, int b){
+      x=a;
+      y=b;
+}
+complex(){};
+friend ostream operator << (ostream &p, complex &q);
+void display(){
     cout<<x<<endl;
     cout<<y;
-   }
+}
 };
-// complex sum(complex a, complex b){
-//     complex temp;
-//     temp.x=a.x+b.x;
-//     temp.y=a.y+b.y;
-//     return temp;
-// }
-int main(){
-    {
-         complex A(2,4);
-    
-
-    A.display();
-    }
-    A.display();
+ostream operator << (ostream &p, complex &q){
+   p=q.x+q.y;
+   return pmn;
    
-    
-    // complex M;
-    // M=sum(A,B);
-    // M.display();
+   
+}
+
+int main(){
+   complex m(2,4);
+   complex n(3,5);
+   cout<<m;
 
 }
